@@ -172,6 +172,14 @@ img {
     color: #fff !important;
 }
 
+.institute-logo {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    display: inline-block;
+}
+
 .navbar-custom .nav-link {
     color: rgba(255, 255, 255, 0.85) !important;
     font-weight: 500;
@@ -644,6 +652,10 @@ img {
 
     .navbar-custom .navbar-brand {
         font-size: 1.1rem;
+    }
+
+    .institute-logo {
+        height: 34px;
     }
 
     .course-card {
