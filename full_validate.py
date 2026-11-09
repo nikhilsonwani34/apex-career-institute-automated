@@ -60,6 +60,7 @@ check("18. Main content landmark present", 'id="main-content"' in html)
 # Navbar
 check("19. Navbar with fixed-top", "fixed-top" in html)
 check("20. Navbar brand text", "Apex Career Institute" in html)
+check("20b. Institute logo integrated with alt text", 'src="ICON.jpg"' in html and 'alt="Apex Career Institute Logo"' in html)
 check("21. Offcanvas mobile nav", "offcanvas" in html)
 check("22. Nav links: Home", 'href="#home"' in html)
 check("23. Nav links: About", 'href="#about"' in html)
