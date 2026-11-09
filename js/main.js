@@ -154,7 +154,7 @@
                 if (!value) return 'Please enter your full name.';
                 if (value.length < 2) return 'Name must be at least 2 characters.';
                 if (value.length > 100) return 'Name must not exceed 100 characters.';
-                if (!/^[A-Za-z\u0900-\u097F\s.'-]+$/.test(value)) return 'Name should contain only letters and spaces.';
+                if (!/^[\p{L}\p{M}\s.'-]+$/u.test(value)) return 'Name should contain only letters and spaces.';
                 return '';
             },
             email: function (value) {
@@ -292,7 +292,7 @@
                 formSuccess.classList.remove('d-none');
                 formSuccess.focus();
 
-                announce('Your enquiry has been submitted successfully. Our team will contact you within 24 to 48 hours.');
+                announce('Your demonstration enquiry passed validation checks.');
             }, 1500);
         });
 
