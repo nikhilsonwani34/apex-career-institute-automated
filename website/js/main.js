@@ -113,7 +113,14 @@
         const counterObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                    animateCounter(entry.target);
+                    if (prefersReducedMotion) {
+                        // Show final value immediately without animation
+                        var target = parseInt(entry.target.getAttribute('data-target'), 10);
+                        var suffix = entry.target.getAttribute('data-suffix') || '';
+                        entry.target.textContent = target + suffix;
+                    } else {
+                        animateCounter(entry.target);
+                    }
                     counterObserver.unobserve(entry.target);
                 }
             });
@@ -212,9 +219,14 @@
             validateField('course');
         });
 
-        // Phone: allow only digits
+        // Phone: strip country code prefix, allow only digits
         fields.phone.addEventListener('input', function () {
-            this.value = this.value.replace(/\D/g, '').slice(0, 10);
+            var v = this.value.replace(/\D/g, '');
+            // Strip leading 91 if user pasted +91XXXXXXXXXX (12+ digits)
+            if (v.length > 10 && v.startsWith('91')) {
+                v = v.substring(2);
+            }
+            this.value = v.slice(0, 10);
         });
 
         // ─── Character Counter ──────────────────────────────────
