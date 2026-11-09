@@ -398,10 +398,20 @@ img {
     box-shadow: none;
 }
 
+.enquiry-section .form-control.is-valid:focus,
+.enquiry-section .form-select.is-valid:focus {
+    box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.2);
+}
+
 .enquiry-section .form-control.is-invalid,
 .enquiry-section .form-select.is-invalid {
     border-color: var(--aci-error);
     box-shadow: none;
+}
+
+.enquiry-section .form-control.is-invalid:focus,
+.enquiry-section .form-select.is-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
 }
 
 .enquiry-section .input-group-text {
