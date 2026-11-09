@@ -124,7 +124,7 @@ check("68. Submit button", 'id="submitBtn"' in html)
 check("69. Loading spinner markup", "btn-spinner" in html and "spinner-border" in html)
 check("70. Form success state", 'id="formSuccess"' in html)
 check("71. Submit another button", 'id="submitAnother"' in html)
-check("72. Success message text", "Enquiry Submitted Successfully" in html)
+check("72. Success message text", "Enquiry Validated Successfully" in html)
 check("73. SR announcements region", 'id="srAnnouncements"' in html and 'aria-live="polite"' in html)
 
 # Footer
