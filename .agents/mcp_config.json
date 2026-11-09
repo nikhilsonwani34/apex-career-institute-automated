@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "kilo-gpt-peer": {
+      "command": "C:\\Users\\USER\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "args": [
+        "C:\\Users\\USER\\Desktop\\AUTOMATION\\orchestration\\mcp\\kilo_gpt_peer.py"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "repository": "nikhilsonwani34/apex-career-institute-automated",
+  "allowed_author": "nikhilsonwani34",
+  "poll_interval_seconds": 30,
+  "trigger_label": "agent-run",
+  "in_progress_label": "agent-in-progress",
+  "completed_label": "agent-review",
+  "blocked_label": "agent-blocked",
+  "task_timeout_seconds": 1200,
+  "agy_binary_path": "",
+  "use_sandbox": true,
+  "enforce_repo_workspace_only": true,
+  "state_dir": "state"
+}
+

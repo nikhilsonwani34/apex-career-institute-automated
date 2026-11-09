@@ -1,0 +1,15 @@
+# Local Worker State and Logs
+orchestration/worker/state/runs/
+orchestration/worker/state/audit.log
+orchestration/worker/state/task_state.json
+orchestration/worker/config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+venv/
+

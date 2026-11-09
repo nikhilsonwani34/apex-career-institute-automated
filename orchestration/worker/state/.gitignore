@@ -1,0 +1,5 @@
+# Ignore everything in state except gitkeep or gitignore
+*
+!.gitignore
+!.gitkeep
+
