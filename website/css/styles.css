@@ -25,16 +25,16 @@
     --aci-white: #ffffff;
     --aci-success: #16a34a;
     --aci-error: #dc2626;
-    
+
     --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    
+
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 10px 25px -3px rgba(14, 28, 54, 0.08), 0 4px 6px -4px rgba(14, 28, 54, 0.04);
     --shadow-xl: 0 20px 35px -5px rgba(14, 28, 54, 0.12), 0 8px 10px -6px rgba(14, 28, 54, 0.06);
     --shadow-gold: 0 8px 24px -4px rgba(245, 158, 11, 0.4);
-    
+
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 18px;
@@ -55,8 +55,18 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6,
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
     font-family: var(--font-heading);
     color: var(--aci-text-dark);
     font-weight: 700;
@@ -294,25 +304,24 @@ img {
 .hero-section {
     position: relative;
     min-height: 100vh;
-    min-height: 680px;
-    background: 
-        radial-gradient(circle at 15% 30%, rgba(37, 99, 235, 0.25) 0%, transparent 45%),
-        radial-gradient(circle at 85% 70%, rgba(245, 158, 11, 0.15) 0%, transparent 40%),
-        linear-gradient(145deg, #070e1c 0%, #0e1c36 45%, #182b4f 100%);
+    min-height: 720px;
+    background:
+        linear-gradient(180deg, rgba(7, 14, 28, 0.82) 0%, rgba(14, 28, 54, 0.90) 100%),
+        url('../campus_students.jpg') center/cover no-repeat;
     overflow: hidden;
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 110px;
+    padding-bottom: 70px;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
-    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, transparent 75%);
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
     pointer-events: none;
 }
 
@@ -433,10 +442,21 @@ img {
     box-shadow: var(--shadow-xl);
 }
 
-.course-card[data-course="ssc"] { border-top-color: #1e40af; }
-.course-card[data-course="banking"] { border-top-color: #0284c7; }
-.course-card[data-course="railway"] { border-top-color: #059669; }
-.course-card[data-course="mppsc"] { border-top-color: #d97706; }
+.course-card[data-course="ssc"] {
+    border-top-color: #1e40af;
+}
+
+.course-card[data-course="banking"] {
+    border-top-color: #0284c7;
+}
+
+.course-card[data-course="railway"] {
+    border-top-color: #059669;
+}
+
+.course-card[data-course="mppsc"] {
+    border-top-color: #d97706;
+}
 
 .course-icon-wrap {
     width: 60px;
@@ -466,10 +486,25 @@ img {
     color: #475569;
 }
 
-.course-card[data-course="ssc"] .course-badge { background: #dbeafe; color: #1e40af; }
-.course-card[data-course="banking"] .course-badge { background: #e0f2fe; color: #0369a1; }
-.course-card[data-course="railway"] .course-badge { background: #dcfce7; color: #15803d; }
-.course-card[data-course="mppsc"] .course-badge { background: #fef3c7; color: #b45309; }
+.course-card[data-course="ssc"] .course-badge {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.course-card[data-course="banking"] .course-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.course-card[data-course="railway"] .course-badge {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.course-card[data-course="mppsc"] .course-badge {
+    background: #fef3c7;
+    color: #b45309;
+}
 
 .course-highlights li {
     padding: 0.35rem 0;
@@ -608,15 +643,36 @@ img {
     width: 100%;
 }
 
-.btn-loading .btn-text { display: none; }
-.btn-loading .btn-spinner { display: inline-flex !important; }
+.btn-loading .btn-text {
+    display: none;
+}
+
+.btn-loading .btn-spinner {
+    display: inline-flex !important;
+}
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    20% { transform: translateX(-6px); }
-    40% { transform: translateX(6px); }
-    60% { transform: translateX(-4px); }
-    80% { transform: translateX(4px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-6px);
+    }
+
+    40% {
+        transform: translateX(6px);
+    }
+
+    60% {
+        transform: translateX(-4px);
+    }
+
+    80% {
+        transform: translateX(4px);
+    }
 }
 
 .shake {
@@ -715,8 +771,15 @@ img {
 
 /* ----- Animations ----- */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-in-up {
@@ -732,9 +795,13 @@ img {
 
 /* ----- Accessibility: Reduced Motion ----- */
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
+    html {
+        scroll-behavior: auto;
+    }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -745,11 +812,14 @@ img {
         transform: none;
     }
 
-    .hero-section { animation: none; }
+    .hero-section {
+        animation: none;
+    }
 }
 
 /* ----- Responsive: Tablet (md) ----- */
 @media (max-width: 991.98px) {
+
     .about-section,
     .courses-section,
     .why-choose-section,
@@ -761,7 +831,7 @@ img {
     .hero-title {
         font-size: 2.75rem;
     }
-    
+
     .hero-trust-strip {
         gap: 1.25rem;
     }
@@ -769,6 +839,7 @@ img {
 
 /* ----- Responsive: Mobile (sm) ----- */
 @media (max-width: 767.98px) {
+
     .about-section,
     .courses-section,
     .why-choose-section,
@@ -819,7 +890,7 @@ img {
     .footer-contact li {
         justify-content: center;
     }
-    
+
     .btn-back-to-top {
         bottom: 1.25rem;
         right: 1.25rem;
